@@ -56,7 +56,7 @@ int get_size(){
 void add_note(){
     printf("Input Index > ");
     int index = get_index();
-    if (SIZE_ARRAY[index]){
+    if (NOTE_ARRAY[index]){
         puts("[x] Index have been used");
     } else{
         int size = get_size();
