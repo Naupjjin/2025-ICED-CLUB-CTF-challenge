@@ -6,7 +6,7 @@ service chal
     protocol = tcp
     server = /home/chal/run.sh
     user = chal
-    port = 20000
+    port = 52000
     flags = REUSE
     bind = 0.0.0.0
     wait = no

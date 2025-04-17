@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  pwn-simplenote-sp-release:
+  pwn-mygo-schedule-alpha:
     build: ./
     volumes:
       - ./share:/home/chal:ro
       - ./xinetd:/etc/xinetd.d/chal:ro
     ports:
-      - 20000:20000
+      - 52000:52000
