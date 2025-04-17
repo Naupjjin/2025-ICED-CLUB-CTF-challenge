@@ -5,5 +5,5 @@
 | challenge | category | description | LINK |
 |-----------|----------|-------------|------|
 | ⚔️ Simple Note SP0 release 👻 | Pwn | Make a fake chunk to leak libc | |
-
+| 💧 Pure Magic 💧 | Pwn | oob + add rsp | |
 
