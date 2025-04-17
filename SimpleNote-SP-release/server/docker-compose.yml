@@ -1,10 +1,10 @@
 version: '3'
 
 services:
-  pwn-SimpleNote-SP-release:
+  pwn-simplenote-sp-release:
     build: ./
     volumes:
       - ./share:/home/chal:ro
       - ./xinetd:/etc/xinetd.d/chal:ro
     ports:
-      - 50000:50000
+      - 20000:20000
