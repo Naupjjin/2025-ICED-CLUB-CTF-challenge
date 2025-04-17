@@ -1,2 +1,2 @@
 all:
-	- gcc chal.c -o chal
+	- gcc -O3 chal.c -o chal -s

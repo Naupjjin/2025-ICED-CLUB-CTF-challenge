@@ -11,10 +11,16 @@ void init_proc(){
     setvbuf(stdout, NULL, _IONBF, 0);
 }
 
+void magic_gift(){
+    puts("Welcome to magic world!");
+    printf("First, I will give you a cool number: %p\n", (void *)printf);
+}
+
 int main(){
     init_proc();
+    magic_gift();
     puts("Which magic do you like ?");
-    char MAGIC[0x100];
+    char MAGIC[0x28];
     fgets(MAGIC, sizeof(MAGIC), stdin); 
     
     puts("I will give you a kind of magic, called OOB");
@@ -48,7 +54,7 @@ int main(){
         }
     }
     
-    puts("Magic is so cool !");
+    puts("Imagination is the source of all magic ~");
 
     return 0;
 }
