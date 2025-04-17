@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 int choice = 0;
-int magic_index = 0;
-unsigned long COOL_MAGIC[4] = {0x100000, 0x200000, 0x300000, 0x400000};
-unsigned long MAGIC_PARAM;
+long long magic_index = 0;
+long long COOL_MAGIC[4] = {0x100000, 0x200000, 0x300000, 0x400000};
+long long MAGIC_PARAM;
 
 void init_proc(){
     setvbuf(stdin, NULL, _IONBF, 0);
@@ -24,23 +24,23 @@ int main(){
         scanf("%d", &choice);
         if(choice == 1){
             printf("MAGIC ! OOB READ > ");
-            if (scanf("%d", &magic_index) != 1) {
+            if (scanf("%lld", &magic_index) != 1) {
                 exit(0);
             }
             else{
-                printf("result ! %lx\n", COOL_MAGIC[magic_index]);
+                printf("result ! %llx\n", COOL_MAGIC[magic_index]);
             }
         } else if(choice == 2){
             printf("MAGIC ! OOB WRITE > ");
-            if (scanf("%d", &magic_index) != 1) {
+            if (scanf("%lld", &magic_index) != 1) {
                 exit(0);
             } else{
                 printf("Adjust your magic param ! ");
-                if (scanf("%lu", &MAGIC_PARAM) != 1) {
+                if (scanf("%lld", &MAGIC_PARAM) != 1) {
                     exit(0);
                 } else{
                     COOL_MAGIC[magic_index] = MAGIC_PARAM;
-                    printf("result ! %lx\n", COOL_MAGIC[magic_index]);
+                    printf("result ! %llx\n", COOL_MAGIC[magic_index]);
                 }
             }
         } else {
